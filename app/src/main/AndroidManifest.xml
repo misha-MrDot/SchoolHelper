@@ -13,6 +13,30 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".EditTimePage"
+            android:exported="false" />
+        <activity
+            android:name=".AddNewTime"
+            android:exported="false" />
+        <activity
+            android:name=".AddNewTimeTablePage"
+            android:exported="false" />
+        <activity
+            android:name=".AddScheduleInHomePage"
+            android:exported="false" />
+        <activity
+            android:name=".Tools"
+            android:exported="false" />
+        <activity
+            android:name=".AlarmClock"
+            android:exported="false" />
+        <activity
+            android:name=".ErrorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TimeTablePage"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

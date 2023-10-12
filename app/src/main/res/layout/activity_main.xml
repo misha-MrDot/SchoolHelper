@@ -11,11 +11,10 @@
         android:id="@+id/schedule"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="7dp"
-        android:layout_marginBottom="33dp"
         android:text="schedule"
         app:backgroundTint="#42AAFF"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toStartOf="@+id/alarm_clock"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,8 +25,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="46dp"
+        android:onClick="alarmClock"
         android:text="alarm clock"
         app:backgroundTint="#42AAFF"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toStartOf="@+id/tools"
         app:layout_constraintStart_toEndOf="@+id/schedule"
         app:layout_constraintTop_toTopOf="parent"
@@ -37,6 +39,7 @@
         android:id="@+id/tools"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="tools"
         android:text="tools"
         app:backgroundTint="#42AAFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,6 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="656dp"
+        android:onClick="addNewSchedule"
         android:text="+"
         app:backgroundTint="#42AAFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,17 +63,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="0dp"
+        android:layout_width="205dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="486dp"
+        android:layout_marginBottom="564dp"
         android:background="#ABCDEF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/alarm_clock"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/schedule"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_clock"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -82,15 +83,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="11dp"
-            android:layout_marginTop="47dp"
-            android:text="Day"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="109dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="3dp"
+            android:onClick="startNewActivity"
+            android:text="Перейти"
+            app:backgroundTint="#42AAFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
